@@ -1,0 +1,19 @@
+---
+locust:
+  csv: "test.csv"
+  logfile: "test.log"
+  host: "http://localhost"
+  no-web: true
+  clients: 3
+  hatch-rate: "1"
+  num-request: 2000
+  locustfile: "sample/locustfile.py"
+custom:
+  auth_file: "sample/auth.json"
+  max_wait : 15
+  min_wait : 10
+  data_file: "sample/data.csv"
+config_parser: "sample/custom_config_parser.py"
+test_process:
+  before: "sample/sample_preprocessor.py"
+  after: "sample/sample_postprocessor..py"
